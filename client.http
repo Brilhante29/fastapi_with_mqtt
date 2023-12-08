@@ -1,0 +1,19 @@
+### Publish Message
+POST http://localhost:8000/publish
+Content-Type: application/json
+
+{
+  "topic_data": {
+    "topic": "seconde"
+  },
+  "message": {
+    "topic": "message",
+    "payload": "seconde hello"
+  }
+}
+
+### Get All Messages
+GET http://localhost:8000/messages/all
+
+### Get Messages by Topic
+GET http://localhost:8000/messages/first
