@@ -49,7 +49,7 @@ Envie uma solicitação POST para: [http://localhost:8000/publish](http://localh
     "payload": "conteúdo_da_sua_mensagem"
   }
 }
-
+```
 
 Substitua `seu_nome_de_tópico` pelo tópico MQTT no qual você deseja publicar e `conteúdo_da_sua_mensagem` pelo conteúdo da mensagem.
 
