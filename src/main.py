@@ -1,7 +1,12 @@
-from fastapi import FastAPI, HTTPException, BackgroundTasks
-from domain.models.message import Message
-from domain.models.topic_data import TopicData
+from fastapi import FastAPI, File, HTTPException, BackgroundTasks, UploadFile
+import joblib
+import pandas as pd
+from pydantic import BaseModel
 from infra.mqtt.mqtt_client import MQTTClientManager
+from domain.temperature_prediction.models.temperature import Temperature
+from domain.mqtt.models.message import Message
+from domain.mqtt.models.topic_data import TopicData
+from domain.temperature_prediction.use_cases.predict import predict_temperature
 
 app = FastAPI()
 mqtt_manager = MQTTClientManager()
@@ -25,3 +30,8 @@ def get_messages_by_topic(topic_name: str):
     if messages:
         return {"topic": topic_name, "messages": messages}
     raise HTTPException(status_code=404, detail="No messages found for this topic.")
+
+@app.post("/predict")
+async def predict_endpoint(input_data: Temperature):
+    prediction = predict_temperature(input_data)
+    return {"prediction": prediction}

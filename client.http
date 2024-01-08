@@ -17,3 +17,18 @@ GET http://localhost:8000/messages/all
 
 ### Get Messages by Topic
 GET http://localhost:8000/messages/first
+
+
+### Predict Temperature
+POST http://localhost:8000/predict
+Content-Type: application/json
+
+{
+    "hour": 12,
+    "day": 15,
+    "month": 6,
+    "year": 2023,
+    "out_in": 1
+}
+
+###
