@@ -65,13 +65,13 @@ Neighbouring readings are nearly identical, so a random split puts almost the sa
 
 ```bash
 python -m venv .venv && . .venv/bin/activate
-pip install -r requirements-dev.txt
+pip install -r requirements.lock -r requirements-dev.txt
 python -m ruff check src tests
 python -m pytest -q
 (cd src && python train.py && MQTT_BROKER=localhost uvicorn main:app --reload)
 ```
 
-The notebook in [`jupyter/notebooks/`](jupyter/notebooks/) holds the original exploration; install `requirements-notebook.txt` to run it.
+The notebook in [`jupyter/notebooks/`](jupyter/notebooks/) holds the original exploration; install `requirements.lock` and `requirements-notebook.txt` to run it.
 
 ## Design decisions
 
