@@ -103,10 +103,16 @@ data/dataset/IOT-temp.csv      public IoT temperature dataset
 jupyter/notebooks/             exploratory notebook
 ```
 
+## Related work
+
+- [vision-serving-fastapi](https://github.com/Brilhante29/vision-serving-fastapi): a FastAPI model service that refuses to start on an unverified checkpoint.
+- [observability-stack](https://github.com/Brilhante29/observability-stack): one HTTP incident traced across metrics, traces, and logs.
+- [model-drift-detector](https://github.com/Brilhante29/model-drift-detector): monitoring a model after deployment.
+
 ## Author
 
 **Guilherme Brilhante**, software engineer working on scalable backends and production AI.
-[LinkedIn](https://www.linkedin.com/in/guilhermefreirebrilhanteseveriano/) · [GitHub](https://github.com/Brilhante29)
+[LinkedIn](https://www.linkedin.com/in/guilhermefreirebrilhanteseveriano/) · [GitHub](https://github.com/Brilhante29) · [Publications](https://dblp.org/pid/353/6812.html)
 
 ## License
 
