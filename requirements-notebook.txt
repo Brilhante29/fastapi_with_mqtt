@@ -1,5 +1,4 @@
-# Extra packages for the exploratory notebook in jupyter/notebooks/.
--r requirements.lock
+# Extra packages for the exploratory notebook in jupyter/notebooks/; install together with requirements.lock.
 matplotlib==3.11.0
 seaborn==0.13.2
 jupyterlab==4.5.3
