@@ -1,34 +1,29 @@
-### Publish Message
+### Health
+GET http://localhost:8000/health
+
+### Publish a message
 POST http://localhost:8000/publish
 Content-Type: application/json
 
 {
-  "topic_data": {
-    "topic": "seconde"
-  },
-  "message": {
-    "topic": "message",
-    "payload": "seconde hello"
-  }
+  "topic": "sensors/room-admin/temperature",
+  "payload": "29.5"
 }
 
-### Get All Messages
-GET http://localhost:8000/messages/all
+### Read every buffered message
+GET http://localhost:8000/messages
 
-### Get Messages by Topic
-GET http://localhost:8000/messages/first
+### Read one topic (topics may contain slashes)
+GET http://localhost:8000/messages/sensors/room-admin/temperature
 
-
-### Predict Temperature
+### Predict a temperature
 POST http://localhost:8000/predict
 Content-Type: application/json
 
 {
-    "hour": 12,
-    "day": 15,
-    "month": 6,
-    "year": 2023,
-    "out_in": 1
+  "hour": 12,
+  "day": 15,
+  "month": 9,
+  "year": 2018,
+  "out_in": 1
 }
-
-###

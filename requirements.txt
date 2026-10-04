@@ -1,11 +1,7 @@
-fastapi
-uvicorn[standard]
-paho-mqtt
-scikit-learn
-pandas
-numpy
-matplotlib
-seaborn
-celery
-aioredis
-python-multipart
+# Direct runtime dependencies. requirements.lock pins the full resolved set.
+fastapi==0.142.2
+uvicorn[standard]==0.54.0
+paho-mqtt==2.1.0
+scikit-learn==1.9.1
+pandas==3.0.6
+joblib==1.6.0
